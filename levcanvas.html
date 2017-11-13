@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+        <canvas width="2000" height="1000"></canvas>
+    <script>
+        var ctx = document.querySelector('canvas').getContext('2d')
+        ctx.fillstyle = 'blue'
+        function drawRect(x,y,width,height){
+            ctx.fillRect(x, y,width,height)
+                drawRect(x + 1 + width, y + 1 + width, width, height)
+                if(x >= 600){
+            return;
+            } 
+       
+        }
+        
+        drawRect(50,50,50,50)
+        console.log(window.innerHeight)
+
+        </script>
+    
+
+</body>
+
+</html>
